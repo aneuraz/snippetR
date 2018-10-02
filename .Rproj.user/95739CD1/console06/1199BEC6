@@ -1,61 +1,17 @@
-81BC/30EAC6DB-contents'
-rm '.Rproj.user/95739CD1/sources/s-5D6381BC/55892A69'
-rm '.Rproj.user/95739CD1/sources/s-5D6381BC/55892A69-contents'
-rm '.Rproj.user/95739CD1/sources/s-5D6381BC/5955455A'
-rm '.Rproj.user/95739CD1/sources/s-5D6381BC/5955455A-contents'
-rm '.Rproj.user/95739CD1/sources/s-5D6381BC/lock_file'
-rm '.Rproj.user/shared/notebooks/patch-chunk-names'
-rm '.Rproj.user/shared/notebooks/paths'
-]0;~/git/snippetRclient-172-18-67-60:snippetR antoine$ git stztus[K[K[K[Katuts
-git: 'statuts' is not a git command. See 'git --help'.
-
-The most similar command is
-	status
-]0;~/git/snippetRclient-172-18-67-60:snippetR antoine$ git statuts[K[Ks
+rm '.Rproj.user/95739CD1/console06/1199BEC6'
+rm '.Rproj.user/95739CD1/console06/1199BEC6.env'
+]0;~/git/snippetRclient-172-18-67-60:snippetR antoine$ git commit . [K[K[K[K[K[K[K[K[Kpush
+Everything up-to-date
+]0;~/git/snippetRclient-172-18-67-60:snippetR antoine$ git push[K[K[K[Kstatus
 On branch master
 Your branch is up to date with 'origin/master'.
 
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-	[32mdeleted:    .Rproj.user/95739CD1/build_options[m
+	[32mdeleted:    .DS_Store[m
+	[32mdeleted:    .Rhistory[m
 	[32mdeleted:    .Rproj.user/95739CD1/console06/1199BEC6[m
 	[32mdeleted:    .Rproj.user/95739CD1/console06/1199BEC6.env[m
-	[32mdeleted:    .Rproj.user/95739CD1/console06/INDEX001[m
-	[32mdeleted:    .Rproj.user/95739CD1/pcs/debug-breakpoints.pper[m
-	[32mdeleted:    .Rproj.user/95739CD1/pcs/files-pane.pper[m
-	[32mdeleted:    .Rproj.user/95739CD1/pcs/source-pane.pper[m
-	[32mdeleted:    .Rproj.user/95739CD1/pcs/windowlayoutstate.pper[m
-	[32mdeleted:    .Rproj.user/95739CD1/pcs/workbench-pane.pper[m
-	[32mdeleted:    .Rproj.user/95739CD1/persistent-state[m
-	[32mdeleted:    .Rproj.user/95739CD1/rmd-outputs[m
-	[32mdeleted:    .Rproj.user/95739CD1/saved_source_markers[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/prop/775010B[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/prop/AF0CF12B[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/prop/C537FDF5[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/prop/E3192340[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/prop/INDEX[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/s-5D6381BC/2068AFA3[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/s-5D6381BC/2068AFA3-contents[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/s-5D6381BC/30EAC6DB[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/s-5D6381BC/30EAC6DB-contents[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/s-5D6381BC/55892A69[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/s-5D6381BC/55892A69-contents[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/s-5D6381BC/5955455A[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/s-5D6381BC/5955455A-contents[m
-	[32mdeleted:    .Rproj.user/95739CD1/sources/s-5D6381BC/lock_file[m
-	[32mdeleted:    .Rproj.user/shared/notebooks/patch-chunk-names[m
-	[32mdeleted:    .Rproj.user/shared/notebooks/paths[m
-	[32mnew file:   .gitignore[m
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   _posts/2018-10-02-ideal-number-of-bins-for-histograms/ideal-number-of-bins-for-histograms.Rmd[m
-	[31mmodified:   _posts/welcome/welcome.Rmd[m
-	[31mmodified:   _site.yml[m
-	[31mmodified:   docs/index.html[m
-	[31mmodified:   docs/posts/2018-10-02-ideal-number-of-bins-for-histograms/index.html[m
 
 ]0;~/git/snippetRclient-172-18-67-60:snippetR antoine$ git commit .
