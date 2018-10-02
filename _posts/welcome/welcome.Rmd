@@ -4,10 +4,7 @@ description: |
   Welcome to our new blog, snippetR: code snippets for R. We hope you enjoy 
   reading what we have to say!
 author:
-  - name: Nora Jones 
-    url: https://example.com/norajones
-    affiliation: Spacely Sprockets
-    affiliation_url: https://example.com/spacelysprokets
+  - name: Antoine Neuraz
 date: 10-02-2018
 output:
   radix::radix_article:

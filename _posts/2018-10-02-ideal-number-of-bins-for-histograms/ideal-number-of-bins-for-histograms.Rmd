@@ -1,7 +1,7 @@
 ---
 title: "ideal number of bins for histogram"
 description: |
-  A short description of the post.
+  2 methods to automatically find the ideal number of bins for your histograms
 author:
   - name: Antoine Neuraz
 date: 10-02-2018

@@ -9,4 +9,6 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Contribute"
+      href: contribute.html
 output: radix::radix_article
