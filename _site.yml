@@ -2,7 +2,7 @@ name: "snippetR"
 title: "snippetR: code snippets for R"
 description: |
   snippetR: code snippets for R
-output_dir: "_site"
+output_dir: "docs"
 navbar:
   right:
     - text: "Home"
