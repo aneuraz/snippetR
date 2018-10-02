@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538477982476.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1451578082",
+    "id" : "2068AFA3",
+    "lastKnownWriteTime" : 1538477979,
+    "last_content_update" : 1538477979,
+    "path" : "~/git/snippetR/_posts/welcome/welcome.Rmd",
+    "project_path" : "_posts/welcome/welcome.Rmd",
+    "properties" : {
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
