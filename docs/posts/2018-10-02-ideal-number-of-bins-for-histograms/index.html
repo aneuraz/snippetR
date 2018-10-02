@@ -1297,6 +1297,10 @@ data(&quot;mtcars&quot;)</code></pre>
 <p>the bin-width is given by <span class="math inline">\(h=2×IQR×n^{-1/3}\)</span> where IQR is the interquartile range. the number of bins is then: <span class="math inline">\((max - min) /(2×IQR×n^{-1/3})\)</span></p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
+#&#39; bins_fd
+#&#39; @description returns the number of bins according to the Freedman-Diaconis rule
+#&#39; @param vec numeric vector
+#&#39; @return number of bins
 bins_fd &lt;- function(vec) {
   diff(range(vec)) / (2 * IQR(vec) / length(vec)^(1/3))
 }</code></pre>
@@ -1305,6 +1309,10 @@ bins_fd &lt;- function(vec) {
 <p>the number of bins corresponds to the square root of the number of observations</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
+#&#39; bins_sqrt
+#&#39; @description returns the square root of the length of a vector
+#&#39; @param vec numeric vector
+#&#39; @return number of bins
 bins_sqrt &lt;- function(vec) {
   sqrt(length(vec))
 }</code></pre>
@@ -1312,19 +1320,50 @@ bins_sqrt &lt;- function(vec) {
 <h2 id="usage">Usage</h2>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-bins_fd &lt;- function(vec) {
-  diff(range(vec)) / (2 * IQR(vec) / length(vec)^(1/3))
-}
-
-ggplot(data = mtcars, aes(x=mpg)) + 
-  geom_histogram(bins = bins_fd(mtcars$mpg)) </code></pre>
+ggplot(data = mtcars, aes(x = mpg)) +
+  geom_histogram(bins = bins_fd(mtcars$mpg))</code></pre>
 <p><img src="ideal-number-of-bins-for-histograms_files/figure-html5/unnamed-chunk-6-1.png" width="576" /></p>
 </div>
 <h2 id="comparisons-between-the-different-methods">Comparisons between the different methods</h2>
 <div class="layout-chunk" data-layout="l-page">
+<pre class="r"><code>
+#&#39; histogram_density
+#&#39; @description plot the histogram of a variable with density plot
+#&#39; @params data : a data.frame
+#&#39; @params var : the variable to plot
+#&#39; @params bins_fn : function to compute the number of bins (if `NULL` defaults to 30)
+#&#39; @params title : title of the plot 
+#&#39; @return ggplot object
+histogram_density &lt;- function(data, var, bins_fn = NULL, title = &quot;&quot;) {
+  if (is.null(bins_fn)) {
+    bins &lt;- 30
+  } else {
+    bins &lt;- bins_fn(data[[var]])
+  }
+  ggplot(data = data, aes_string(x = var)) + geom_density(fill = &quot;red&quot;, alpha = 0.2) +
+    geom_histogram(aes(y = ..density..),
+      bins = bins,
+      alpha = 0.5
+    ) +
+    ggtitle(title)
+}
+
+var &lt;- &quot;mpg&quot;
+a &lt;- histogram_density(mtcars, var, bins_fn = NULL, title = &quot;Default&quot;)
+b &lt;- histogram_density(mtcars, var, bins_fn = bins_sqrt, title = &quot;Square root&quot;)
+c &lt;- histogram_density(mtcars, var, bins_fn = bins_fd, title = &quot;Freedman-Diaconis&quot;)
+
+a + b + c + patchwork::plot_layout(ncol = 3)</code></pre>
 <p><img src="ideal-number-of-bins-for-histograms_files/figure-html5/unnamed-chunk-7-1.png" width="1152" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-page">
+<pre class="r"><code>
+var &lt;- &quot;wt&quot;
+a &lt;- histogram_density(mtcars, var, bins_fn = NULL, title = &quot;Default&quot;)
+b &lt;- histogram_density(mtcars, var, bins_fn = bins_sqrt, title = &quot;Square root&quot;)
+c &lt;- histogram_density(mtcars, var, bins_fn = bins_fd, title = &quot;Freedman-Diaconis&quot;)
+
+a + b + c + patchwork::plot_layout(ncol = 3)</code></pre>
 <p><img src="ideal-number-of-bins-for-histograms_files/figure-html5/unnamed-chunk-8-1.png" width="1152" /></p>
 </div>
 <div id="refs" class="references">
